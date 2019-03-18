@@ -4,13 +4,12 @@
 #
 Name     : R-mapdata
 Version  : 2.3.0
-Release  : 8
+Release  : 9
 URL      : https://cran.r-project.org/src/contrib/mapdata_2.3.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/mapdata_2.3.0.tar.gz
 Summary  : Extra Map Databases
 Group    : Development/Tools
 License  : GPL-2.0
-Requires: R-maps
 BuildRequires : R-maps
 BuildRequires : buildreq-R
 
@@ -29,10 +28,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552877811
+export SOURCE_DATE_EPOCH=1552886370
 
 %install
-export SOURCE_DATE_EPOCH=1552877811
+export SOURCE_DATE_EPOCH=1552886370
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
