@@ -4,7 +4,7 @@
 #
 Name     : R-mapdata
 Version  : 2.3.0
-Release  : 18
+Release  : 19
 URL      : https://cran.r-project.org/src/contrib/mapdata_2.3.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/mapdata_2.3.0.tar.gz
 Summary  : Extra Map Databases
@@ -13,32 +13,28 @@ License  : GPL-2.0
 Requires: R-maps
 BuildRequires : R-maps
 BuildRequires : buildreq-R
-BuildRequires : util-linux
 
 %description
-Notes on creating new map databases.
-1) See the references:
-Richard A. Becker, and Allan R. Wilks,
-"Maps in S",
-emph{AT\&T Bell Laboratories Statistics Research Report [93.2], 1993.}
+higher-resolution databases.
 
 %prep
 %setup -q -c -n mapdata
+cd %{_builddir}/mapdata
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1571859802
+export SOURCE_DATE_EPOCH=1589535787
 
 %install
-export SOURCE_DATE_EPOCH=1571859802
+export SOURCE_DATE_EPOCH=1589535787
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
