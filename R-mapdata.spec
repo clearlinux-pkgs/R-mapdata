@@ -4,7 +4,7 @@
 #
 Name     : R-mapdata
 Version  : 2.3.1
-Release  : 41
+Release  : 42
 URL      : https://cran.r-project.org/src/contrib/mapdata_2.3.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/mapdata_2.3.1.tar.gz
 Summary  : Extra Map Databases
